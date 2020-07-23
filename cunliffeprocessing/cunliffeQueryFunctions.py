@@ -3,7 +3,7 @@ from odyssey import returnOdyssey
 import xml.etree.ElementTree as ET
 
 # change FILENAME to local path
-FILENAME = "../data/cunliffe.lexentries.unicode-copy.xml"
+FILENAME = "data/cunliffe.lexentries.unicode-copy.xml"
 
 ns = {"TEI": "http://www.tei-c.org/ns/1.0"}
 tree = ET.parse(FILENAME)

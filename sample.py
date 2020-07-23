@@ -1,7 +1,6 @@
-# from .cunliffe-processing.iliad import returnIliad
-# from .cunliffe-processing.odyssey import returnOdyssey
-# import cunliffe-processing.cunliffeQueryFunctions
-import cunliffe-processing
+# from .cunliffeprocessing.iliad import returnIliad
+# from .cunliffeprocessing.odyssey import returnOdyssey
+# import cunliffeprocessing.cunliffeQueryFunctions
 import xml.etree.ElementTree as ET
 
 # change FILENAME to local path

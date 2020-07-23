@@ -1,15 +1,17 @@
-from .ilenglishalignment import printEngSent
+from .EnglishAlignment import englishalignment
 import sys
 import xml.etree.ElementTree as ET
 
-sys.path.append("C:\Users\bella\Documents\GitHub\cunliffe-viewer\data")
-# change FILENAME to local path
-FILENAME = "tlg0012.tlg001.perseus-grc1.tb.xml"
+def printGrkSent(inputWord, inputCite, homerWork):
 
-tree = ET.parse(FILENAME)
-root = tree.getroot()
-
-def printGrkSent(inputWord, inputCite):
+    if (homerWork == "Il"):
+        FILENAME = "tlg0012.tlg001.perseus-grc1.tb.xml"
+    elif (homerWork == "Od"):
+        FILENAME ="tlg0012.tlg002.perseus-grc1.tb.xml"
+        
+    tree = ET.parse(FILENAME)
+    root = tree.getroot()
+    
     for sentence in root.findall('.//sentence'):
         sentid = sentence.get('id')
         for word in sentence.findall('./word'):
@@ -21,8 +23,17 @@ def printGrkSent(inputWord, inputCite):
                 if ((inputWord == lemma and inputCite == strippedCite) or (inputWord == lemma and inputCite == strippedCite2)):
                     return sentid
 
-def returnIliad(inputWord, inputCite):
-    targetid = printGrkSent(inputWord, inputCite)
+def returnWorks(inputWord, inputCite, homerWork):
+    
+    if (homerWork == "Il"):
+        FILENAME = "tlg0012.tlg001.perseus-grc1.tb.xml"
+    elif (homerWork == "Od"):
+        FILENAME ="tlg0012.tlg002.perseus-grc1.tb.xml"
+        
+    tree = ET.parse(FILENAME)
+    root = tree.getroot()
+    
+    targetid = printGrkSent(inputWord, inputCite, homerWork)
     for sentence in root.findall('.//sentence'):
         sentid = sentence.get('id')
         if (sentid == targetid):
@@ -37,4 +48,8 @@ def returnIliad(inputWord, inputCite):
                     sys.stdout.write(form)
                     sys.stdout.write(" ")
     print("")
-    printEngSent(targetid)
+    if (homerWork == "Il"):
+        englishalignment.printIlEngSent(targetid)
+    elif (homerWork == "Od"):
+        englishalignment.printOdEngSent(targetid)
+    
