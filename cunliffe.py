@@ -61,7 +61,7 @@ print('\n')
 print("Enter lemma.")
 inputWord = input("Input: ")
 
-print("Enter citation. If you would not like to input a citation, input 'N/A'.")
+print("Enter citation in the format of 'Hom. Il. 4.233', 'Hom. Od. 3.22', etc. If you would not like to input a citation, input 'N/A'.")
 inputCite = input("Input: ")
 print("")
 
