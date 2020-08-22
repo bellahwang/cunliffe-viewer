@@ -23,7 +23,7 @@ def lexentries(inputWord, inputCite):
                             print(biblcite)
                             homerwork = biblcite[5:7]
                             returnWorks(inputWord, inputCite, homerwork)
-                        else:
+                        elif (inputCite == 'N/A'):
                             print(biblcite)
                             homerwork = biblcite[5:7]
                             returnWorks(inputWord, biblcite, homerwork)
@@ -48,7 +48,7 @@ def hompers(inputWord, inputCite):
                             homerwork = biblcite[5:7]
                             print(biblcite)
                             returnWorks(inputWord, inputCite, homerwork)
-                        else:
+                        elif (inputCite == 'N/A'):
                             homerwork = biblcite[5:7]
                             print(biblcite)
                             returnWorks(inputWord, biblcite, homerwork)
