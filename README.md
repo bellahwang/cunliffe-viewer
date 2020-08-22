@@ -1,4 +1,4 @@
-# cunliffe-query
+# cunliffe-viewer
 A script to query for vocabulary lemmas and line numbers in the Cunliffe lexicon.
 
 ## How to Run 
