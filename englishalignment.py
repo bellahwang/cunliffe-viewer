@@ -13,6 +13,7 @@ def printIlEngSent(targetSentID):
         id = s.get('{http://www.w3.org/XML/1998/namespace}id')
         if (targetSentID == id[4:11]):
             sys.stdout.write(s.text)
+    print("")
 
 def printOdEngSent(target):
     
@@ -24,3 +25,4 @@ def printOdEngSent(target):
         id = s.get('{http://www.w3.org/XML/1998/namespace}id')
         if (target == id[4:11]):
             sys.stdout.write(s.text)
+    print("")

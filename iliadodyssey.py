@@ -50,6 +50,8 @@ def returnWorks(inputWord, inputCite, homerWork):
     print("")
     if (homerWork == "Il"):
         englishalignment.printIlEngSent(targetid)
+        print("")
     elif (homerWork == "Od"):
         englishalignment.printOdEngSent(targetid)
+        print("")
     
