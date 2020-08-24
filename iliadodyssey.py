@@ -17,9 +17,14 @@ def printGrkSent(inputWord, inputCite, homerWork):
         for word in sentence.findall('./word'):
             lemma = word.get('lemma')
             cite = word.get('cite')
-            if (cite != None):
+            if (cite != None and homerWork == "Il"):
                 strippedCite = "Hom. Il. " + cite[32:]
                 strippedCite2 = "Il. " + cite[32:]
+                if ((inputWord == lemma and inputCite == strippedCite) or (inputWord == lemma and inputCite == strippedCite2)):
+                    return sentid
+            elif (cite != None and homerWork == "Od"):
+                strippedCite = "Hom. Od. " + cite[32:]
+                strippedCite2 = "Od. " + cite[32:]
                 if ((inputWord == lemma and inputCite == strippedCite) or (inputWord == lemma and inputCite == strippedCite2)):
                     return sentid
 
