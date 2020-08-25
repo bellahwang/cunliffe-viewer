@@ -29,7 +29,7 @@ def lexentries(inputWord, inputCite, searchBy):
                                 homerwork = biblcite[5:7]
                                 returnWorks(inputWord, biblcite, homerwork)
                         elif (searchBy == 'book'):
-                            if (inputCite == biblcite[0:11]):
+                            if (inputCite[0:11] == biblcite[0:11]):
                                 print(biblcite)
                                 homerwork = biblcite[5:7]
                                 returnWorks(inputWord, biblcite, homerwork)
@@ -63,14 +63,33 @@ def hompers(inputWord, inputCite, searchBy):
                         print('Gloss: ' + glosstxt)
                     for bibl in p.findall(".//TEI:bibl", ns):
                         biblcite = bibl.get('n')
-                        if (inputCite == biblcite):
-                            homerwork = biblcite[5:7]
-                            print(biblcite)
-                            returnWorks(inputWord, inputCite, homerwork)
-                        elif (inputCite == 'N/A'):
-                            homerwork = biblcite[5:7]
-                            print(biblcite)
-                            returnWorks(inputWord, biblcite, homerwork)
+                        if (searchBy == 'work'):
+                            if (inputCite == biblcite[0:8]):
+                                print(biblcite)
+                                homerwork = biblcite[5:7]
+                                returnWorks(inputWord, biblcite, homerwork)
+                            elif (inputCite == 'N/A'):
+                                print(biblcite)
+                                homerwork = biblcite[5:7]
+                                returnWorks(inputWord, biblcite, homerwork)
+                        elif (searchBy == 'book'):
+                            if (inputCite[0:11] == biblcite[0:11]):
+                                print(biblcite)
+                                homerwork = biblcite[5:7]
+                                returnWorks(inputWord, biblcite, homerwork)
+                            elif (inputCite == 'N/A'):
+                                print(biblcite)
+                                homerwork = biblcite[5:7]
+                                returnWorks(inputWord, biblcite, homerwork)
+                        elif (searchBy == 'line'):
+                            if (inputCite == biblcite):
+                                print(biblcite)
+                                homerwork = biblcite[5:7]
+                                returnWorks(inputWord, inputCite, homerwork)
+                            elif (inputCite == 'N/A'):
+                                print(biblcite)
+                                homerwork = biblcite[5:7]
+                                returnWorks(inputWord, biblcite, homerwork)
 
 print("This script is a tool to query for lemmas and their citations in the Cunliffe Lexicon.")
 print("Results will be outputted as 'gloss' '-> citations underneath gloss'.")

@@ -19,13 +19,11 @@ def printGrkSent(inputWord, inputCite, homerWork):
             cite = word.get('cite')
             if (cite != None and homerWork == "Il"):
                 strippedCite = "Hom. Il. " + cite[32:]
-                strippedCite2 = "Il. " + cite[32:]
-                if ((inputWord == lemma and inputCite == strippedCite) or (inputWord == lemma and inputCite == strippedCite2)):
+                if (inputWord == lemma and inputCite == strippedCite):
                     return sentid
             elif (cite != None and homerWork == "Od"):
                 strippedCite = "Hom. Od. " + cite[32:]
-                strippedCite2 = "Od. " + cite[32:]
-                if ((inputWord == lemma and inputCite == strippedCite) or (inputWord == lemma and inputCite == strippedCite2)):
+                if (inputWord == lemma and inputCite == strippedCite):
                     return sentid
 
 def returnWorks(inputWord, inputCite, homerWork):
