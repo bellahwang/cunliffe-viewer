@@ -100,7 +100,7 @@ print("Enter lemma.")
 inputWord = input("Input: ")
 
 print("Would you like to search by work (Hom. Il., Hom. Od.),")
-print("by book (Hom. Il. 1, Hom Od. 1), or line number? (Hom. Il. 1.1, Hom. Od. 1.1")
+print("by book (Hom. Il. 1, Hom Od. 1), or line number? (Hom. Il. 1.1, Hom. Od. 1.1)")
 print("Enter 'work', 'book', or 'line'.")
 searchBy = input("Input: ")
 
