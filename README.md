@@ -29,16 +29,20 @@ Enter lemma.
 Input: μῆνις
 ```
 
-After hitting enter, the script will output the following text.
+After hitting enter, the script will output the following text. 'work', 'book', or 'line' can be specified.
+Examples of possible citations 
 ```
-Enter citation in the format of 'Hom. Il. 4.233', 'Hom. Od. 3.22', etc. 
-If you would not like to input a citation, input 'N/A'.
+Would you like to search by work (Hom. Il., Hom. Od.),
+by book (Hom. Il. 1, Hom Od. 1), or line number? (Hom. Il. 1.1, Hom. Od. 1.1)
+Enter 'work', 'book', or 'line'.
 Input:
 ```
 
-If you have a specific line number for the lemma you'd like to look up, enter it here. Otherwise, input 'N/A'.
+Depending on the selection you make, the following text will vary in terms of content in the square brackets. 
+The square brackets list possible examples and formats that the citations should be inputted in.
+If you want all citations underneath each gloss within the Cunliffe Lexicon instead of a specific citation, input 'N/A'.
 ```
-Enter citation in the format of 'Hom. Il. 4.233', 'Hom. Od. 3.22', etc. 
+Enter citation in the format of [varies with selection of 'work', 'book', or 'line']. 
 If you would not like to input a citation, input 'N/A'.
 Input: N/A
 ```
@@ -60,7 +64,7 @@ Achilles, dear to Zeus, you order me to declare the wrath of Apollo, the lord wh
 or
 
 ```
-Enter citation in the format of 'Hom. Il. 1.111', 'Hom. Od. 1.11', etc. 
+Enter citation in the format of [varies with selection of 'work', 'book', or 'line']. 
 If you would not like to input a citation, input 'N/A'.
 Input: Hom. Il. 9.517
 ```
