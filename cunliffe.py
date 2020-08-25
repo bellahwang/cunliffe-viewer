@@ -61,6 +61,9 @@ def hompers(inputWord, inputCite, searchBy):
                     for gloss in p.findall(".//TEI:gloss", ns):
                         glosstxt = gloss.text
                         print('Gloss: ' + glosstxt)
+                    for note in p.findall(".//TEI:note", ns):
+                        notetxt = note.text
+                        print('Note: ' + notetxt)
                     for bibl in p.findall(".//TEI:bibl", ns):
                         biblcite = bibl.get('n')
                         if (searchBy == 'work'):
